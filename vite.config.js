@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -10,5 +11,25 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  server: {
+    hmr: true,
+    port: 3004,
+    proxy: {
+      "/api": {
+        target: "http://localhost:8081",
+        changeOrigin: true,
+        // @ts-ignore
+        pathRewrite: {
+          "^api": "/api"
+        }
+      }
+    }
+  },
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "less",
+      patterns: [path.resolve(__dirname, "./src/assets/base.less")]
+    }
+  },
 })
