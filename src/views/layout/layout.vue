@@ -242,7 +242,7 @@ watch(
         border: none;
       }
       .el-tabs__content {
-        display: flex;
+        display: none;
       }
     }
     .content-body {

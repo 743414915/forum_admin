@@ -26,7 +26,7 @@
           <el-button
             v-for="(btn, index) in buttons"
             :key="btn + index"
-            :type="btn.type"
+            :type="btn.type || 'primary'"
             @click="btn.click"
             color="rgb(251, 185, 223)"
           >

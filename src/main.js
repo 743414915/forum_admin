@@ -17,19 +17,24 @@ const app = createApp(App);
 import Dialog from "@/components/Dialog/Dialog.vue"
 import Avatar from '@/components/avatar/avatar.vue'
 import cover from '@/components/cover/cover.vue'
+import table from '@/components/table/table.vue'
 import message from '@/common/message.js'
+import confirm from '@/components/confirm/confirm.js'
 
 app.config.globalProperties.VueCookies = VueCookies;
 app.config.globalProperties.message = message
 app.config.globalProperties.request = request
+app.config.globalProperties.confirm = confirm
 app.config.globalProperties.globalInfo = {
   bodyWidth: 60,
   avatarUrl: '/api/file/getAvatar/',
-  imageUrl: '/api/file/getImage/'
+  imageUrl: '/api/file/getImage/',
+  webDomain: 'http://127.0.0.1:3004'
 };
 app.use(router)
   .use(ElementPlus)
   .component("Dialog", Dialog)
   .component("Avatar", Avatar)
   .component("cover", cover)
+  .component("tables", table);
 app.mount('#app');
