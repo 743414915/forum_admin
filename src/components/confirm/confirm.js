@@ -7,7 +7,7 @@ const confirm = (message, okFun) => {
     type: "info"
   }).then(() => {
     okFun && okFun();
-  }).catch(() => { })
+  }).catch((e) => { console.log(e)})
 }
 
 export default confirm

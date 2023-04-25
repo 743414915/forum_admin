@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '@/views/Login.vue';
 import layout from '@/views/layout/layout.vue';
 import ArticleList from '@/views/forum/articleList/articleList.vue'
-import BoardList from '@/views/forum/boardList.vue'
+import BoardList from '@/views/forum/boardList/boardList.vue'
 import CommentList from '@/views/forum/commentList/commentList.vue'
 import SysSetting from '@/views/settings/sysSettings.vue'
 import UserList from '@/views/user/userList.vue'

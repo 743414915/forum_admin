@@ -129,7 +129,7 @@ const clearSelection = () => {
   dataTableRef.value.clearSelection();
 };
 
-// 设置行选中
+// 设置当前行选中
 const setCurrentRow = (rowKey, rowValue) => {
   let row = props.dataSource.list.find((item) => {
     return item[rowKey] === rowValue;

@@ -17,7 +17,7 @@
               size="large"
               :type="item.type"
               class="input-panel"
-              @keyup="login"
+              @keyup.enter="login"
             >
               <template #prefix>
                 <span :class="['iconfont', item.icon]"></span>

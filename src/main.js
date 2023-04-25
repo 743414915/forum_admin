@@ -18,6 +18,7 @@ import Dialog from "@/components/Dialog/Dialog.vue"
 import Avatar from '@/components/avatar/avatar.vue'
 import cover from '@/components/cover/cover.vue'
 import table from '@/components/table/table.vue'
+import coverUpload from '@/components/coverUpload/coverUpload.vue'
 import message from '@/common/message.js'
 import confirm from '@/components/confirm/confirm.js'
 import verifyObj from '@/utils/verify.js'
@@ -31,12 +32,13 @@ app.config.globalProperties.globalInfo = {
   bodyWidth: 60,
   avatarUrl: '/api/file/getAvatar/',
   imageUrl: '/api/file/getImage/',
-  webDomain: 'http://127.0.0.1:3004'
+  webDomain: import.meta.env.VITE_WEB_DOMAIN
 };
 app.use(router)
   .use(ElementPlus)
   .component("Dialog", Dialog)
   .component("Avatar", Avatar)
   .component("cover", cover)
+  .component("coverUpload", coverUpload)
   .component("tables", table);
 app.mount('#app');
