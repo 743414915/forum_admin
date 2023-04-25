@@ -21,7 +21,7 @@
       <template v-for="(item, index) in columns" :key="item + index">
         <template v-if="item.scopedSlots">
           <el-table-column
-            v-if="item.prop == 'serialNumber' ? options.showIndex : true"
+            v-if="item.prop === 'serialNumber' ? options.showIndex : true"
             :key="index"
             :prop="item.prop"
             :label="item.label"

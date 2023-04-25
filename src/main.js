@@ -20,7 +20,9 @@ import cover from '@/components/cover/cover.vue'
 import table from '@/components/table/table.vue'
 import message from '@/common/message.js'
 import confirm from '@/components/confirm/confirm.js'
+import verifyObj from '@/utils/verify.js'
 
+app.config.globalProperties.Verify = verifyObj
 app.config.globalProperties.VueCookies = VueCookies;
 app.config.globalProperties.message = message
 app.config.globalProperties.request = request
